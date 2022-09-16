@@ -1,9 +1,15 @@
 import { Card, CardHeader, CardBody, Tag, CardTitle, CardText, CardPoster, CardFooter, UserBox, Avatar, UserInfo, UserName, Date } from './BlogCard.styled';
 // import { format } from 'date-fns'
 // import formatDistanceToNow from 'date-fns/formatDistanceToNow'
+// formatDistanceToNow(new Date(date), { addSuffix: true });
+import { formatDistanceToNow } from 'date-fns';
+
 
 export const BlogCard = ({ poster, tag, title, description, userName, avatar, postedAt }) => {
   
+
+  // console.log(formatDistanceToNow(new Date("2022-02-01T11:14:11.105Z"), { addSuffix: true }))
+
   // console.log(formatDistanceToNow(new Date()));
   
   return (
@@ -26,7 +32,7 @@ export const BlogCard = ({ poster, tag, title, description, userName, avatar, po
           <Avatar src={avatar} alt={userName} />
           <UserInfo>
             <UserName>{userName}</UserName>
-            <Date>{postedAt}</Date>
+            {/* <Date>{formatDistanceToNow("2022-04-06T18:46:01.577Z", { addSuffix: true })}</Date> */}
           </UserInfo>
         </UserBox>
       </CardFooter>
